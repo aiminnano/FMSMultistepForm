@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-purple200: #d6d9e6;
+  --font-ubuntu: "Ubuntu", sans-serif;
+  --color-grey500: #9699ab;
+  --color-blue300: #adbeff;
+  --color-blue200: #bfe2fd;
+  --color-blue950: #02295a;
+  --color-purple600: #473dff;
+  --color-purple200: #d6d9e6;
+  --color-blue100: #f0f5ff;
+}
+body{
+  background-color: #f0f5ff;
+}

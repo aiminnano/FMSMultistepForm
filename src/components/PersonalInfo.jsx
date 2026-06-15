@@ -1,7 +1,7 @@
 function PersonalInfo() {
     return(
         <>
-            <div className="flex flex-col gap-30 md:gap-15">
+            <div className="hidden flex flex-col gap-30 md:gap-15">
                 <div className="relative z-1 flex flex-col items-start shadow-2xl md:shadow-none rounded-xl gap-5 md:gap-10 w-full max-w-[768px] p-6 pt-8 pb-8 md:p-10 md:pl-25 md:pr-25 md:max-w-[643px] bg-white">
                     <div className="flex flex-col items-start gap-2 md:gap-1">
                         <h1 className="text-2xl md:text-[33px] font-bold text-blue950">Personal Info</h1>
@@ -22,8 +22,8 @@ function PersonalInfo() {
                         </div>
                     </div>
                 </div>
-                <div className="bg-white w-full p-4 md:p-0 md:pr-24 fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto flex justify-end">
-                    <button type="button" className="bg-blue950 text-white text-sm p-3 rounded-sm">Next Step</button>
+                <div className="bg-white w-full p-4 md:p-0 md:pr-25 fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto flex justify-end">
+                    <button type="button" className=" bg-blue950 text-white text-sm p-3 md:pl-6 md:pr-6 rounded-md md:text-base">Next Step</button>
                 </div>
             </div>
 

@@ -1,6 +1,9 @@
 import PersonalInfo from "./PersonalInfo";
 import Steps from "./Steps";
 import SelectPlan from "./SelectPlan";
+import AddOns from "./AddOns";
+import FinishingUp from "./FinishingUp";
+import ThankYou from "./ThankYou";
 
 function Container() {
     return (
@@ -10,6 +13,9 @@ function Container() {
                     <Steps />
                     <PersonalInfo />
                     <SelectPlan />
+                    <AddOns />
+                    <FinishingUp />
+                    <ThankYou />
                 </div>
             </div>
         </>

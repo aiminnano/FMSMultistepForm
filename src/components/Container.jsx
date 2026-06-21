@@ -4,18 +4,22 @@ import SelectPlan from "./SelectPlan";
 import AddOns from "./AddOns";
 import FinishingUp from "./FinishingUp";
 import ThankYou from "./ThankYou";
+import { useState } from 'react'
 
 function Container() {
+
+    const [step, setStep] = useState(1);
+
     return (
         <>
             <div className="relative grid md:place-items-center min-h-screen font-ubuntu box-border">
                 <div className=" flex flex-col md:flex-row items-center md:items-start px-4 rounded-2xl bg-blue100 md:bg-white md:p-4.5 md:pr-0 w-full max-w-[940px] md:shadow-xl">
-                    <Steps />
-                    <PersonalInfo />
-                    <SelectPlan />
-                    <AddOns />
-                    <FinishingUp />
-                    <ThankYou />
+                    <Steps step={step} setStep={setStep} />
+                    <PersonalInfo step={step} setStep={setStep} />
+                    <SelectPlan step={step} setStep={setStep} />
+                    <AddOns step={step} setStep={setStep} />
+                    <FinishingUp step={step} setStep={setStep} />
+                    <ThankYou step={step} setStep={setStep} />
                 </div>
             </div>
         </>

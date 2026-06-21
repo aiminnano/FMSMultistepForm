@@ -3,14 +3,14 @@ import advanced from '../../assets/images/icon-advanced.svg'
 import pro from '../../assets/images/icon-pro.svg'
 import { useState } from 'react'
 
-function SelectPlan(){
+function SelectPlan({step, setStep}){
 
     const [isOn, setIsOn] = useState(false);
     const [selected, setSelected] = useState(0);
 
     return(
         <>
-            <div className="hidden flex flex-col gap-30 md:gap-20 w-full">
+            <div className={`${step === 2 ? 'flex' : 'hidden'} flex-col gap-30 md:gap-20 w-full`}>
                 <div className="relative z-1 flex flex-col items-start shadow-2xl md:shadow-none rounded-xl gap-5 md:gap-9 w-full max-w-[768px] p-6 pt-8 pb-8 md:p-10 md:pl-25 md:pr-25 md:max-w-[643px] bg-white">      
                     <div className="flex flex-col items-start gap-2 md:gap-1">
                         <h1 className="text-2xl md:text-[33px] font-bold text-blue950">Select your plan</h1>
@@ -54,7 +54,7 @@ function SelectPlan(){
                     </div>
                 </div>
                 <div className="flex items-center place-content-between md:pl-25 bg-white w-full p-4 md:p-0 md:pr-25 fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto ">
-                    <div className='cursor-pointer text-grey500 text-sm hover:text-blue950 font-medium md:text-base'>Go back</div>
+                    <div className='cursor-pointer text-grey500 text-sm hover:text-blue950 font-medium md:text-base' onClick={() => setStep(1)}>Go back</div>
                     <button type="button" className=" hover:bg-blue300 bg-blue950 text-white text-sm p-3 md:pl-6 md:pr-6 rounded-md md:text-base cursor-pointer">Next Step</button>
                 </div>
             </div>

@@ -1,7 +1,7 @@
 import sidebarDesktop from '../../assets/images/bg-sidebar-desktop.svg'
 import sidebarMobile from '../../assets/images/bg-sidebar-mobile.svg'
 
-function Steps() {
+function Steps({step, setStep}) {
     return (
         <>
             <div className='md:relative w-full md:max-w-[274px] md:h-[568px]'>
@@ -11,28 +11,28 @@ function Steps() {
                     
 
                     <div className=' flex md:gap-4 text-white md:w-full'>
-                        <div className=' w-8.5 h-8.5 flex items-center justify-center rounded-full border-1 border-blue300 font-bold text-sm bg-blue200 text-blue950'>1</div>
+                        <div className={`${step === 1 ? 'border-blue300 bg-blue200 text-blue950' : 'border-white text-white'} w-8.5 h-8.5 flex items-center justify-center rounded-full border-1 font-bold text-sm `}>1</div>
                         <div className='hidden md:flex flex-col items-start justify-center'>
                             <div className='font-normal text-blue300 text-xs'>STEP 1</div>
                             <div className='font-medium tracking-widest text-[14px] leading-[1.5]'>YOUR INFO</div>
                         </div>
                     </div>
                     <div className=' flex md:gap-4 text-white md:w-full'>
-                        <div className=' w-8.5 h-8.5 flex items-center justify-center rounded-full border-1 border-white font-bold text-sm'>2</div>
+                        <div className={`${step === 2 ? 'border-blue300 bg-blue200 text-blue950' : 'border-white text-white'} w-8.5 h-8.5 flex items-center justify-center rounded-full border-1 font-bold text-sm `}>2</div>
                         <div className='hidden md:flex flex-col items-start justify-center'>
                             <div className='font-normal text-blue300 text-xs'>STEP 2</div>
                             <div className='font-medium tracking-widest text-[14px] leading-[1.5]'>SELECT PLAN</div>
                         </div>
                     </div>
                     <div className=' flex md:gap-4 text-white md:w-full'>
-                        <div className=' w-8.5 h-8.5 flex items-center justify-center rounded-full border-1 border-white font-bold text-sm'>3</div>
+                        <div className={`${step === 3 ? 'border-blue300 bg-blue200 text-blue950' : 'border-white text-white'} w-8.5 h-8.5 flex items-center justify-center rounded-full border-1 font-bold text-sm `}>3</div>
                         <div className='hidden md:flex flex-col items-start justify-center'>
                             <div className='font-normal text-blue300 text-xs'>STEP 3</div>
                             <div className='font-medium tracking-widest text-[14px] leading-[1.5]'>ADD-ONS</div>
                         </div>
                     </div>
                     <div className=' flex md:gap-4 text-white md:w-full'>
-                        <div className=' w-8.5 h-8.5 flex items-center justify-center rounded-full border-1 border-white font-bold text-sm'>4</div>
+                        <div className={`${step === 4 ? 'border-blue300 bg-blue200 text-blue950' : 'border-white text-white'} w-8.5 h-8.5 flex items-center justify-center rounded-full border-1 font-bold text-sm `}>4</div>
                         <div className='hidden md:flex flex-col items-start justify-center'>
                             <div className='font-normal text-blue300 text-xs'>STEP 4</div>
                             <div className='font-medium tracking-widest text-[14px] leading-[1.5]'>SUMMARY</div>

@@ -54,7 +54,7 @@ function PersonalInfo({step, setStep}) {
                         </div>
                     </div>
                 </div>
-                <div className="bg-white w-full p-4 md:p-0 md:pr-25 fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto flex justify-end">
+                <div className="bg-white w-full p-4 md:p-0 md:pr-23.5 fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto flex justify-end">
                     <button type="button" className="cursor-pointer bg-blue950 text-white text-sm p-3 md:pl-6 md:pr-6 rounded-md md:text-base hover:bg-blue300" onClick={validate}>Next Step</button>
                 </div>
             </div>

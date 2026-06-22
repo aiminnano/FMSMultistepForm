@@ -1,7 +1,7 @@
 import sidebarDesktop from '../../assets/images/bg-sidebar-desktop.svg'
 import sidebarMobile from '../../assets/images/bg-sidebar-mobile.svg'
 
-function Steps({step, setStep}) {
+function Steps({step}) {
     return (
         <>
             <div className='md:relative w-full md:max-w-[274px] md:h-[568px]'>

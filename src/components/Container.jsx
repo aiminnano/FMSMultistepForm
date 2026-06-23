@@ -12,6 +12,9 @@ function Container() {
     const [option, setOption] = useState('arcade');
     const [plan, setPlan] = useState('monthly');
     const [isOn, setIsOn] = useState(false);
+    const [ onlineService, setOnlineService] = useState(false);
+    const [ largerStorage, setLargerStorage] = useState(false);
+    const [ customProfile, setCustomProfile] = useState(false);
 
     return (
         <>
@@ -20,8 +23,8 @@ function Container() {
                     <Steps step={step} />
                     <PersonalInfo step={step} setStep={setStep} />
                     <SelectPlan step={step} setStep={setStep} option={option} setOption={setOption} plan={plan} setPlan={setPlan} isOn={isOn} setIsOn={setIsOn}/>
-                    <AddOns step={step} setStep={setStep} option={option} setOption={setOption} plan={plan} setPlan={setPlan} isOn={isOn} />
-                    <FinishingUp step={step} setStep={setStep} />
+                    <AddOns step={step} setStep={setStep} option={option} setOption={setOption} plan={plan} setPlan={setPlan} isOn={isOn} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} setLargerStorage={setLargerStorage} customProfile={customProfile} setCustomProfile={setCustomProfile} />
+                    <FinishingUp step={step} option={option} setOption={setOption} setStep={setStep} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} setLargerStorage={setLargerStorage} customProfile={customProfile} setCustomProfile={setCustomProfile} />
                     <ThankYou step={step} setStep={setStep} />
                 </div>
             </div>

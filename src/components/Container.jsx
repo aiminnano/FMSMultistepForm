@@ -15,6 +15,10 @@ function Container() {
     const [ onlineService, setOnlineService] = useState(false);
     const [ largerStorage, setLargerStorage] = useState(false);
     const [ customProfile, setCustomProfile] = useState(false);
+    const [totalPerMonth, setTotalPerMonth] = useState(0);
+    const [totalPerYear, setTotalPerYear] = useState(0);
+    const [optionValuePM, setOptionValuePM] = useState(0);
+    const [optionValuePY, setOptionValuePY] = useState(0);
 
     return (
         <>
@@ -23,8 +27,8 @@ function Container() {
                     <Steps step={step} />
                     <PersonalInfo step={step} setStep={setStep} />
                     <SelectPlan step={step} setStep={setStep} option={option} setOption={setOption} plan={plan} setPlan={setPlan} isOn={isOn} setIsOn={setIsOn}/>
-                    <AddOns step={step} setStep={setStep} option={option} setOption={setOption} plan={plan} setPlan={setPlan} isOn={isOn} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} setLargerStorage={setLargerStorage} customProfile={customProfile} setCustomProfile={setCustomProfile} />
-                    <FinishingUp step={step} option={option} setOption={setOption} setStep={setStep} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} setLargerStorage={setLargerStorage} customProfile={customProfile} setCustomProfile={setCustomProfile} />
+                    <AddOns step={step} setStep={setStep} option={option} setOption={setOption} plan={plan} setPlan={setPlan} isOn={isOn} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} setLargerStorage={setLargerStorage} customProfile={customProfile} setCustomProfile={setCustomProfile} totalPerMonth={totalPerMonth} setTotalPerMonth={setTotalPerMonth} totalPerYear={totalPerYear} setTotalPerYear={setTotalPerYear} optionValuePM={optionValuePM} setOptionValuePM={setOptionValuePM} setOptionValuePY={setOptionValuePY} />
+                    <FinishingUp step={step} option={option} setOption={setOption} isOn={isOn} setStep={setStep} onlineService={onlineService} setOnlineService={setOnlineService} largerStorage={largerStorage} setLargerStorage={setLargerStorage} customProfile={customProfile} setCustomProfile={setCustomProfile} totalPerMonth={totalPerMonth} totalPerYear={totalPerYear} optionValuePM={optionValuePM} optionValuePY={optionValuePY}/>
                     <ThankYou step={step} setStep={setStep} />
                 </div>
             </div>

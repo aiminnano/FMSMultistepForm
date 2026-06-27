@@ -1,9 +1,35 @@
 import { useState } from 'react'
 import checkmark from '../../assets/images/icon-checkmark.svg'
 
-function AddOns({step, setStep, option, setOption, plan, setPlan, isOn, onlineService, setOnlineService, largerStorage, setLargerStorage, customProfile, setCustomProfile}){
+function AddOns({step, setStep, option, setOption, plan, setPlan, isOn, onlineService, setOnlineService, largerStorage, setLargerStorage, customProfile, setCustomProfile, setTotalPerMonth, setTotalPerYear, setOptionValuePM, setOptionValuePY}){
 
     
+
+    const calculatePerMonth = () => {
+        let perMonth = 0;
+        if(option === 'arcade') perMonth = 9;
+        else if (option === 'advanced') perMonth = 12;
+        else if (option === 'pro') perMonth = 15;
+        setOptionValuePM(perMonth);
+        if(onlineService) perMonth += 1;
+        if(largerStorage) perMonth += 2;
+        if(customProfile) perMonth += 2;
+
+        setTotalPerMonth(perMonth);
+    }
+
+    const calculatePerYear = () => {
+        let perYear = 0;
+        if(option === 'arcade') perYear = 90;
+        else if (option === 'advanced') perYear = 120;
+        else if (option === 'pro') perYear = 150;
+        setOptionValuePY(perYear);
+        if(onlineService) perYear += 10;
+        if(largerStorage) perYear += 20;
+        if(customProfile) perYear += 20;
+
+        setTotalPerYear(perYear);
+    }
 
     return(
         <>
@@ -55,7 +81,7 @@ function AddOns({step, setStep, option, setOption, plan, setPlan, isOn, onlineSe
                 </div>
                 <div className="flex items-center place-content-between md:pl-25 bg-white w-full p-4 md:p-0 md:pr-25 fixed bottom-0 left-0 right-0 md:relative md:bottom-auto md:left-auto md:right-auto ">
                     <div className='cursor-pointer text-grey500 text-sm hover:text-blue950 font-medium md:text-base' onClick={() => setStep(2)}>Go back</div>
-                    <button type="button" className=" hover:bg-blue300 bg-blue950 text-white text-sm p-3 md:pl-6 md:pr-6 rounded-md md:text-base cursor-pointer" onClick={() => setStep(4)}>Next Step</button>
+                    <button type="button" className=" hover:bg-blue300 bg-blue950 text-white text-sm p-3 md:pl-6 md:pr-6 rounded-md md:text-base cursor-pointer" onClick={() => {setStep(4); calculatePerMonth(); calculatePerYear();}}>Next Step</button>
                 </div>
             </div>
         </>
